@@ -99,6 +99,11 @@ li {
   background: #4fc419;
   color: #fff;
 }
+.btn--contact {
+  background: #4fc419;
+  color: #fff;
+  margin-top: 10px;
+}
 .info {
   color: #4fc419;
 }
