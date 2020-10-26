@@ -194,11 +194,12 @@
           <h1>Contact <span class="info">Me</span></h1>
           <div class="contact__innerContent">
             <div class="contact__innerContent--left">
-              <form>
+              <form data-netlify="true">
                 <div class="inputContianer">
                   <input
                     placeholder="Enter Full Name"
                     class="inputField"
+                    name="name"
                     type="text"
                   />
                 </div>
@@ -206,6 +207,7 @@
                   <input
                     placeholder="Phone Number"
                     class="inputField"
+                    name="phone"
                     type="text"
                   />
                 </div>
@@ -213,19 +215,20 @@
                   <input
                     placeholder="Enter Email"
                     class="inputField"
+                    name="email"
                     type="email"
                   />
                 </div>
                 <div class="inputContianer">
                   <textarea
                     placeholder="Enter Message"
-                    name=""
+                    name="message"
                     class="message"
                     cols="30"
                     rows="10"
                   ></textarea>
                 </div>
-                <button class="btn btn--contact">Send message</button>
+                <button type="submit" class="btn btn--contact">Send message</button>
               </form>
             </div>
             <div class="contact__innerContent--right">
