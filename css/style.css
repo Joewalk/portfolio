@@ -145,7 +145,6 @@ header {
 }
 /* ...........BANNER.......... */
 .banner {
-  /* background: #000; */
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.92),
@@ -159,6 +158,7 @@ header {
 }
 
 .banner__inner {
+  /* display: flex; */
   padding: 20px;
 }
 .banner__inner--left {
@@ -177,19 +177,29 @@ header {
 /* ...........ABOUT.......... */
 .about {
   background: #fff;
+  padding: 60px 10px;
 }
 .about__inner {
-  padding: 4rem 0;
-  width: 60%;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   text-align: center;
-  color: #333;
+}
+.about__inner--left {
+  width: 50%;
+  padding-top: 40px;
+  font-family: "Lucida Sans", sans-serif;
 }
 .about__inner h1,
 .about__inner h3 {
-  padding-bottom: 1rem;
-  font-size: 2.5rem;
+  padding-bottom: 20px;
   text-transform: uppercase;
+}
+.about__inner h1 {
+  font-size: 40px;
+}
+.about__inner h3 {
+  font-size: 30px;
 }
 .about__inner p {
   font-size: 18px;
@@ -281,15 +291,15 @@ header {
 }
 
 .contact__innerContent {
-  width: 70%;
-  margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 2rem;
+  width: 70%;
+  margin: auto;
 }
 
-.contact__innerContent--left form {
+.contact__innerContent--left {
   width: 400px;
 }
 .contact__innerContent--left form .inputField {
@@ -307,6 +317,7 @@ header {
   padding: 10px 20px;
   border: 0;
 }
+
 .contact__innerContent--right h4 {
   color: #333;
   margin: 1rem;
@@ -333,7 +344,10 @@ header {
 /* ...........MEDIA QURIES.......... */
 @media only screen and (max-width: 1026px) {
   .about__inner {
-    width: 80%;
+    flex-direction: column;
+  }
+  .about__inner--left {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -349,9 +363,9 @@ header {
   .banner__inner {
     margin-left: 2rem;
   }
-  .about__inner {
+  /* .about__inner {
     width: 80%;
-  }
+  } */
   .skills {
     height: 100%;
   }
