@@ -116,12 +116,7 @@ header {
   z-index: 2;
 }
 
-/* .logo {
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-  font-weight: bold;
-} */
+
 .logo > img {
   height: 50px;
 }
@@ -156,16 +151,27 @@ header {
     url("../img/banner-bg.jpg");
   background-attachment: fixed;
   color: #fff;
-  height: 500px;
+  height: 600px;
   padding-top: 5rem;
+  position: relative;
 }
-
+.banner::before,.banner::after{
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: #fff;
+  transform: skewY(-3deg);
+}
 .banner__inner {
   /* display: flex; */
   padding: 20px;
 }
 .banner__inner--left {
   padding-top: 4rem;
+  animation: slideInFromLeft 1.2s ease-in;
 }
 .banner__inner--left h1 {
   font-size: 50px;
@@ -192,6 +198,12 @@ header {
   width: 50%;
   padding-top: 40px;
   font-family: "Lucida Sans", sans-serif;
+  animation: slideInFromLeft 1.2s ease-in;
+
+}
+.about__inner--right {
+  animation: slideInFromRight 1.2s ease-in;
+
 }
 .about__inner h1,
 .about__inner h3 {
@@ -382,7 +394,23 @@ header {
   color: #fff;
   background: #000;
 }
-
+/* ...........ANIMATIONS............. */
+@keyframes slideInFromLeft {
+  0%{
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0%{
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /* ...........MEDIA QURIES.......... */
 @media only screen and (max-width: 1026px) {
   .about__inner {

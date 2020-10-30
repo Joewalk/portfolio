@@ -194,7 +194,8 @@
           <h1>Contact <span class="info">Me</span></h1>
           <div class="contact__innerContent">
             <div class="contact__innerContent--left">
-              <form data-netlify="true">
+              <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact">
                 <div class="inputContianer">
                   <input
                     placeholder="Enter Full Name"
