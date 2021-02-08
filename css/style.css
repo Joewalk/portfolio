@@ -298,7 +298,10 @@ header {
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
+.project__title {
+  color: #333;
+  font-size: 1.5rem;
+}
 .project:hover .project__inner {
   transform: rotateY(180deg);
 }
