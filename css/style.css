@@ -237,6 +237,7 @@ header {
 }
 .skills__inner h2 {
   text-align: center;
+  font-size: 3rem;
 }
 .skills__innerContent {
   display: flex;
@@ -269,6 +270,7 @@ header {
 .projects__inner h1 {
   text-align: center;
   color: #4fc419;
+  font-size: 3rem;
 }
 .projects__innerContent {
   display: grid;
