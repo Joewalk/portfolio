@@ -8,7 +8,7 @@ html {
 }
 body {
   font-family: Helvetica, sans-serif;
-  background: #f8f9fa;
+  /* background: #f8f9fa; */
 }
 
 /* ...........GENERAL STYLES.......... */
@@ -116,7 +116,6 @@ header {
   z-index: 2;
 }
 
-
 .logo > img {
   height: 50px;
 }
@@ -155,8 +154,9 @@ header {
   padding-top: 5rem;
   position: relative;
 }
-.banner::before,.banner::after{
-  content: '';
+.banner::before,
+.banner::after {
+  content: "";
   position: absolute;
   bottom: -40px;
   left: 0;
@@ -199,11 +199,9 @@ header {
   padding-top: 40px;
   font-family: "Lucida Sans", sans-serif;
   animation: slideInFromLeft 1.2s ease-in;
-
 }
 .about__inner--right {
   animation: slideInFromRight 1.2s ease-in;
-
 }
 .about__inner h1,
 .about__inner h3 {
@@ -340,66 +338,32 @@ header {
 /* ...........CONTACTS.......... */
 .contact {
   padding: 4rem 0;
+  background: #000;
+  color: #fff;
 }
 
 .contact__inner h1 {
   text-align: center;
-  color: #444;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
-
-.contact__innerContent {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 2rem;
-  width: 70%;
-  margin: auto;
-}
-
-.contact__innerContent--left {
-  width: 400px;
-}
-.contact__innerContent--left form .inputField {
-  width: 100%;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  outline: none;
-  border: 0;
-  color: #333;
-}
-.contact__innerContent--left .message {
-  color: #333;
-  width: 100%;
-  outline: none;
-  padding: 10px 20px;
-  border: 0;
-}
-
-.contact__innerContent--right h4 {
-  color: #333;
-  margin: 1rem;
-}
-.contact__innerContent--right ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-.contact__innerContent--right ul li a i {
-  font-size: 2rem;
-  color: #4fc419;
-}
-
-/* ...........FOOTER.......... */
-.footer {
-  padding: 2.5rem;
+.contact__inner {
   text-align: center;
-  color: #fff;
-  background: #000;
 }
+.contact__inner h3 {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  font-weight: 700px;
+  font-size: 1rem;
+}
+
+.contact__inner p {
+  font-weight: 400px;
+}
+
 /* ...........ANIMATIONS............. */
 @keyframes slideInFromLeft {
-  0%{
+  0% {
     transform: translateX(-100%);
   }
   100% {
@@ -407,7 +371,7 @@ header {
   }
 }
 @keyframes slideInFromRight {
-  0%{
+  0% {
     transform: translateX(100%);
   }
   100% {
@@ -445,18 +409,6 @@ header {
   .skills__inner {
     width: 80%;
   }
-
-  .projects__innerContent {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .contact__innerContent {
-    width: 80%;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .contact__innerContent--right {
-    margin-top: 2rem;
-  }
 }
 @media only screen and (max-width: 425px) {
   .banner {
@@ -490,15 +442,8 @@ header {
     grid-template-columns: 1fr;
     place-items: center;
   }
-  .contact__innerContent {
-    width: 100%;
-    padding: 2rem 1rem;
-  }
+
   .inputContainer {
-    width: 100%;
-  }
-  .contact__innerContent--left,
-  .contact__innerContent--left form {
     width: 100%;
   }
 }
